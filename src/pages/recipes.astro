@@ -1,0 +1,263 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Sausage Recipes: Homemade Delights to Savor";
+const pageDescription = "Discover mouthwatering recipes featuring our savory homemade sausages. From classic breakfast links to gourmet Italian varieties, elevate your meals with porky perfection. Easy-to-follow instructions for home cooks.";
+
+const recipes = [
+  {
+    id: 1,
+    title: "Classic Breakfast Sausage Patties",
+    description: "Juicy patties packed with sage, thyme, and fennel for that authentic homemade taste.",
+    prepTime: "15 mins",
+    cookTime: "10 mins",
+    difficulty: "Easy"
+  },
+  {
+    id: 2,
+    title: "Italian Sausage Pasta",
+    description: "Rich, spicy sausage tossed with fresh herbs and pasta in a creamy tomato sauce.",
+    prepTime: "20 mins",
+    cookTime: "25 mins",
+    difficulty: "Medium"
+  },
+  {
+    id: 3,
+    title: "Smoky Bacon-Wrapped Sausage Sticks",
+    description: "Crispy exterior with tender center, perfect for appetizers and game day snacks.",
+    prepTime: "25 mins",
+    cookTime: "15 mins",
+    difficulty: "Easy"
+  },
+  {
+    id: 4,
+    title: "Savory Sausage and Mushroom Risotto",
+    description: "Creamy Arborio rice infused with herb-seasoned sausage and earthy mushrooms.",
+    prepTime: "20 mins",
+    cookTime: "30 mins",
+    difficulty: "Medium"
+  },
+  {
+    id: 5,
+    title: "Spiced Sausage Hash Browns",
+    description: "Crispy hash browns topped with seasoned sausage and fresh chives for a hearty breakfast.",
+    prepTime: "15 mins",
+    cookTime: "20 mins",
+    difficulty: "Easy"
+  },
+  {
+    id: 6,
+    title: "Herb-Crusted Sausage Meatballs",
+    description: "Juicy meatballs with an aromatic herb crust, perfect for dinner or parties.",
+    prepTime: "25 mins",
+    cookTime: "25 mins",
+    difficulty: "Medium"
+  }
+];
+
+const featuredRecipes = [
+  {
+    id: 1,
+    title: "Homemade Italian Sausage",
+    description: "Crafted with traditional spices and slow-cooked for maximum flavor.",
+    icon: "fas fa-utensils"
+  },
+  {
+    id: 2,
+    title: "Seasonal Herb Blend",
+    description: "Our proprietary blend enhances every sausage with earthy, aromatic notes.",
+    icon: "fas fa-seedling"
+  },
+  {
+    id: 3,
+    title: "Slow-Cooked Excellence",
+    description: "Traditional techniques that deliver consistent quality every time.",
+    icon: "fas fa-fire"
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <!-- Hero Section -->
+  <div class="relative bg-gradient-to-br from-amber-50 to-orange-50 py-20 md:py-32 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#e67e22_1px,transparent_1px)] [background-size:20px_20px] opacity-10"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl font-bold text-amber-900 mb-6 leading-tight">
+          {pageTitle}
+        </h1>
+        <p class="text-xl md:text-2xl text-amber-700 mb-8 max-w-2xl mx-auto">
+          {pageDescription}
+        </p>
+        <div class="flex justify-center">
+          <div class="bg-amber-200 rounded-full px-6 py-2 text-amber-900 font-medium shadow-md">
+            <i class="fas fa-tag mr-2"></i> Savor the Flavors of Homemade Porky Delights
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
+  </div>
+
+  <!-- Welcome Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex items-start mb-10">
+          <div class="mr-4 mt-2 text-amber-600">
+            <i class="fas fa-leaf text-3xl"></i>
+          </div>
+          <div>
+            <h2 class="text-3xl font-bold text-amber-900 mb-4">Welcome to Our Recipes</h2>
+            <p class="text-lg text-gray-700 leading-relaxed">
+              At <span class="font-semibold text-amber-700">The Savory Sausage Spot</span>, we believe in the art of crafting flavorful, homemade sausages that bring warmth and joy to every table. Our tagline, <span class="italic">"Savor the Flavors of Homemade Porky Delights"</span>, inspires these recipes designed for the modern home chef. Whether you're a sausage novice or a seasoned pro, dive into our collection of easy, delicious ideas using fresh ingredients and simple techniques.
+            </p>
+          </div>
+        </div>
+        
+        <div class="flex flex-col md:flex-row gap-8">
+          <div class="md:w-1/2">
+            <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 h-full border border-amber-100 shadow-sm">
+              <h3 class="text-xl font-bold text-amber-900 mb-3">Why Our Sausages?</h3>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-amber-600 mt-1 mr-2"></i>
+                  <span>100% Premium Pork sourced locally</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-amber-600 mt-1 mr-2"></i>
+                  <span>Artisan blend of traditional spices</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-amber-600 mt-1 mr-2"></i>
+                  <span>No preservatives or artificial additives</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-amber-600 mt-1 mr-2"></i>
+                  <span>Crafted in small batches for quality</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="md:w-1/2">
+            <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 h-full border border-green-100 shadow-sm">
+              <h3 class="text-xl font-bold text-green-900 mb-3">Recipe Philosophy</h3>
+              <p class="text-gray-700 leading-relaxed">
+                Explore recipes that highlight the rich, earthy tones of our pork masterpieces. Each one is crafted to be approachable yet indulgent, perfect for weeknight dinners or special gatherings. Our dishes celebrate the natural flavors while adding our signature touch of warmth and comfort.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Recipes Section -->
+  <section class="py-16 bg-gradient-to-b from-amber-50 to-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">Featured Recipe Categories</h2>
+        <p class="text-lg text-amber-700 max-w-2xl mx-auto">Discover the foundational elements that make our sausages extraordinary</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {featuredRecipes.map((recipe) => (
+          <div key={recipe.id} class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+            <div class="p-6">
+              <div class="w-16 h-16 rounded-full bg-amber-100 flex items-center justify-center mb-4">
+                <i class={`text-2xl ${recipe.icon} text-amber-700`}></i>
+              </div>
+              <h3 class="text-xl font-bold text-amber-900 mb-2">{recipe.title}</h3>
+              <p class="text-gray-600">{recipe.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Recipe Grid Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">Delicious Sausage Creations</h2>
+        <p class="text-lg text-amber-700 max-w-2xl mx-auto">Simple steps to elevate your meal preparation with our signature sausages</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {recipes.map((recipe) => (
+          <div key={recipe.id} class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl overflow-hidden border border-amber-100 shadow-sm hover:shadow-md transition-all duration-300">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-xl font-bold text-amber-900">{recipe.title}</h3>
+                <span class={`px-3 py-1 rounded-full text-xs font-semibold ${
+                  recipe.difficulty === 'Easy' ? 'bg-green-100 text-green-800' : 
+                  recipe.difficulty === 'Medium' ? 'bg-yellow-100 text-yellow-800' : 
+                  'bg-red-100 text-red-800'
+                }`}>
+                  {recipe.difficulty}
+                </span>
+              </div>
+              
+              <p class="text-gray-700 mb-6">{recipe.description}</p>
+              
+              <div class="flex justify-between text-sm text-gray-600 mb-6">
+                <div class="flex items-center">
+                  <i class="fas fa-clock mr-2 text-amber-600"></i>
+                  <span>Prep: {recipe.prepTime}</span>
+                </div>
+                <div class="flex items-center">
+                  <i class="fas fa-fire mr-2 text-amber-600"></i>
+                  <span>Cook: {recipe.cookTime}</span>
+                </div>
+              </div>
+              
+              <button class="w-full py-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-medium rounded-lg hover:from-amber-600 hover:to-orange-600 transition-all duration-300 shadow-md hover:shadow-lg">
+                View Recipe
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-r from-amber-600 to-orange-600">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Savor?</h2>
+      <p class="text-xl text-amber-100 max-w-2xl mx-auto mb-10">
+        Join thousands who've transformed their meals with our handcrafted sausages
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <button class="px-8 py-4 bg-white text-amber-700 font-bold rounded-lg shadow-lg hover:bg-amber-50 transition-colors duration-300">
+          <i class="fas fa-shopping-cart mr-2"></i> Order Sausages
+        </button>
+        <button class="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-amber-700 transition-colors duration-300">
+          <i class="fas fa-book-open mr-2"></i> Download Recipe Book
+        </button>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  .floating {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .recipe-card:hover {
+    transform: translateY(-5px);
+  }
+</style>

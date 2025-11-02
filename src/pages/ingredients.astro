@@ -1,0 +1,204 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Ingredients for Authentic Porky Pies";
+const pageDescription = "Discover the essential ingredients needed to craft mouthwatering authentic porky pies at PieCraft Pro. From flaky pastry to savory fillings, get the bold breakdown for your culinary masterpiece.";
+
+const pastryIngredients = [
+  { name: "500g plain flour", description: "For structure and tenderness." },
+  { name: "150g lard or butter", description: "Provides flakiness; lard for authenticity." },
+  { name: "200ml hot water", description: "Helps create a pliable dough without eggs." },
+  { name: "Pinch of salt", description: "Enhances flavor." }
+];
+
+const fillingIngredients = [
+  { name: "1kg pork shoulder", description: "Choose marbled cuts for best results." },
+  { name: "1 large onion", description: "Finely diced for flavor base." },
+  { name: "2 carrots", description: "Adds depth and sweetness." },
+  { name: "2 celery stalks", description: "For aromatic complexity." },
+  { name: "2 cloves garlic", description: "Minced for extra pungency." },
+  { name: "2 bay leaves", description: "Classic herb for richness." },
+  { name: "1 tsp thyme", description: "Earthy complement to pork." },
+  { name: "Salt and pepper", description: "To taste." }
+];
+
+const cookingTips = [
+  "Chill your dough for 30 minutes before rolling",
+  "Preheat your oven to 190°C (375°F)",
+  "Let pies cool for 10 minutes before serving",
+  "Serve with traditional mustard for enhanced flavor"
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <!-- Hero Section -->
+  <div class="relative bg-gradient-to-r from-[#225522] to-[#1a401a] py-24 overflow-hidden">
+    <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight">
+          Ingredients for <span class="text-[#ffd700]">Authentic</span> Porky Pies
+        </h1>
+        <p class="text-xl text-gray-100 mb-8 max-w-2xl mx-auto">
+          Discover the essential ingredients needed to craft mouthwatering authentic porky pies at PieCraft Pro. 
+          From flaky pastry to savory fillings, get the bold breakdown for your culinary masterpiece.
+        </p>
+        <div class="flex justify-center">
+          <div class="bg-[#ffd700] text-[#225522] font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:bg-opacity-90 transition duration-300 transform hover:scale-105">
+            Master the Art of Authentic Porky Pies
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Introduction Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-[#ffd700]">
+          <h2 class="text-3xl font-bold text-[#225522] mb-6">Essential Ingredients for Authentic Porky Pies</h2>
+          <p class="text-lg text-gray-700 mb-6">
+            At <strong>PieCraft Pro</strong>, we believe in sourcing the finest ingredients to master the art of 
+            <em>authentic porky pies</em>. Whether you're a novice baker or a seasoned pro, these bold selections 
+            will elevate your pies to legendary status. Below, we've broken down the key components for a classic 
+            pork pie recipe serving 8.
+          </p>
+          <div class="flex items-center mt-8">
+            <i class="fas fa-utensils text-4xl text-[#225522] mr-4"></i>
+            <p class="text-gray-600 italic">"The secret to greatness lies in the simplest ingredients"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pastry Ingredients -->
+  <section class="py-16 bg-[#f0f7f0]">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-[#225522] mb-4">Pastry Ingredients</h2>
+        <div class="w-24 h-1 bg-[#ffd700] mx-auto"></div>
+        <p class="mt-6 text-xl text-gray-700 max-w-2xl mx-auto">
+          The foundation of any great porky pie is a <span class="font-bold">crisp, golden pastry</span>. 
+          Use these for a hot water crust pastry that's easy to work with and bakes to perfection:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        {pastryIngredients.map((ingredient) => (
+          <div class="bg-white rounded-xl shadow-md p-6 transform transition duration-300 hover:scale-105 hover:shadow-lg border border-[#e0f0e0]">
+            <div class="flex items-start">
+              <div class="bg-[#ffd700] text-[#225522] w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                <i class="fas fa-bread-slice text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-[#225522] mb-2">{ingredient.name}</h3>
+                <p class="text-gray-700">{ingredient.description}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-12 max-w-3xl mx-auto bg-[#225522] rounded-xl p-6 text-white">
+        <div class="flex items-start">
+          <i class="fas fa-lightbulb text-2xl text-[#ffd700] mt-1 mr-4"></i>
+          <div>
+            <h3 class="text-xl font-bold mb-2">Pro Tip</h3>
+            <p>Chill your dough for 30 minutes before rolling to ensure perfect texture. Cold ingredients create the flakiest crust!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filling Ingredients -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-[#225522] mb-4">Filling Ingredients</h2>
+        <div class="w-24 h-1 bg-[#ffd700] mx-auto"></div>
+        <p class="mt-6 text-xl text-gray-700 max-w-2xl mx-auto">
+          A perfect pork pie combines rich flavors with tender meat. These ingredients come together to create a classic comfort food experience.
+        </p>
+      </div>
+
+      <div class="max-w-5xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {fillingIngredients.map((ingredient) => (
+            <div class="flex items-start p-4 bg-gray-50 rounded-lg hover:bg-[#f0f7f0] transition duration-200">
+              <div class="bg-[#ffd700] text-[#225522] w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                <i class="fas fa-drumstick-bite"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-[#225522]">{ingredient.name}</h3>
+                <p class="text-gray-700 text-sm">{ingredient.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cooking Tips -->
+  <section class="py-16 bg-gradient-to-br from-[#1a401a] to-[#225522] text-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-4">Mastering Your Porky Pie</h2>
+        <div class="w-24 h-1 bg-[#ffd700] mx-auto"></div>
+        <p class="mt-6 text-xl max-w-2xl mx-auto">
+          Expert techniques that will elevate your pork pie from good to exceptional
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        {cookingTips.map((tip, index) => (
+          <div class="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl border border-white border-opacity-20 hover:bg-opacity-20 transition duration-300">
+            <div class="text-3xl font-bold text-[#ffd700] mb-4">{index + 1}</div>
+            <p class="text-lg">{tip}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-20 bg-[#225522]">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold text-white mb-6">Ready to Create Your Perfect Porky Pie?</h2>
+      <p class="text-xl text-gray-200 max-w-2xl mx-auto mb-10">
+        With our carefully curated ingredients and expert guidance, you'll craft a pork pie that impresses every time.
+      </p>
+      <button class="bg-[#ffd700] text-[#225522] font-bold py-4 px-10 rounded-full text-xl shadow-lg hover:bg-opacity-90 transition duration-300 transform hover:scale-105">
+        Begin Your Porky Pie Journey
+      </button>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+  
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .hover-scale {
+    transition: transform 0.3s ease;
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.03);
+  }
+  
+  .border-gradient {
+    border-image: linear-gradient(to right, #ffd700, #225522) 1;
+  }
+</style>

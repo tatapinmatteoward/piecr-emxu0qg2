@@ -1,0 +1,226 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Contact Us";
+const pageDescription = "Get in touch with PieCraft Pro for inquiries about our pie-making courses, recipes, or custom orders. We're here to help you master authentic porky pies!";
+const contactInfo = [
+  {
+    icon: "fas fa-envelope",
+    title: "Email",
+    content: "hello@piecraftpro.com"
+  },
+  {
+    icon: "fas fa-phone",
+    title: "Phone",
+    content: "+1-555-PIE-CRAFT"
+  },
+  {
+    icon: "fas fa-map-marker-alt",
+    title: "Mailing Address",
+    content: "PieCraft Pro, 123 Pie Lane, Doughville, PA 12345"
+  }
+];
+
+const socialLinks = [
+  {
+    name: "Instagram",
+    url: "https://instagram.com/piecraftpro",
+    icon: "fab fa-instagram"
+  },
+  {
+    name: "Facebook",
+    url: "https://facebook.com/piecraftpro",
+    icon: "fab fa-facebook"
+  },
+  {
+    name: "YouTube",
+    url: "https://youtube.com/piecraftchannel",
+    icon: "fab fa-youtube"
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <!-- Hero Section -->
+  <div class="relative bg-gradient-to-r from-[#225522] to-[#1a3d1a] py-24 overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjEiIGZpbGw9IiNmZmRhMDAiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjcGF0dGVybikiLz48L3N2Zz4=')]"></div>
+    </div>
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">Contact Us</h1>
+        <p class="text-xl text-[#ffd700] font-medium">Get in touch with PieCraft Pro</p>
+        <div class="mt-8 flex justify-center">
+          <div class="w-24 h-1 bg-[#ffd700] rounded-full"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-2xl shadow-xl p-6 md:p-10 mb-16 border-l-8 border-[#225522]">
+          <h2 class="text-3xl font-bold text-[#225522] mb-6">Ready to Master the Pie?</h2>
+          <p class="text-lg text-gray-700 mb-6">
+            At <span class="font-bold text-[#225522]">PieCraft Pro</span>, we're passionate about crafting the perfect porky pie. 
+            Whether you have questions about our bold culinary courses, need recipe tips, or want to collaborate on a pie project, 
+            our team is here to assist.
+          </p>
+          <div class="flex items-center mt-8">
+            <div class="mr-4 text-[#ffd700]">
+              <i class="fas fa-utensils text-3xl"></i>
+            </div>
+            <p class="text-gray-600 italic">"The secret ingredient is passion, and we're ready to share ours with you."</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <!-- Contact Information -->
+          <div>
+            <h3 class="text-2xl font-bold text-[#225522] mb-8 pb-2 border-b-2 border-[#ffd700]">How to Reach Us</h3>
+            
+            <div class="space-y-8">
+              {contactInfo.map((info, index) => (
+                <div class="flex group">
+                  <div class="flex-shrink-0 mr-4">
+                    <div class="w-12 h-12 rounded-full bg-[#225522] flex items-center justify-center text-white group-hover:bg-[#ffd700] transition-colors duration-300">
+                      <i class={info.icon}></i>
+                    </div>
+                  </div>
+                  <div class="flex-1">
+                    <h4 class="text-xl font-semibold text-[#225522]">{info.title}</h4>
+                    <p class="mt-2 text-gray-700">{info.content}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div class="mt-12">
+              <h3 class="text-2xl font-bold text-[#225522] mb-6 pb-2 border-b-2 border-[#ffd700]">Let's Connect Online</h3>
+              <p class="text-gray-700 mb-6">Follow us for <span class="font-bold text-[#ffd700]">daily pie inspiration</span>:</p>
+              
+              <div class="flex flex-wrap gap-4">
+                {socialLinks.map((social) => (
+                  <a 
+                    href={social.url} 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center px-6 py-3 bg-[#225522] text-white rounded-full hover:bg-[#ffd700] hover:text-[#225522] transition-all duration-300 transform hover:-translate-y-1"
+                  >
+                    <i class={`${social.icon} mr-2`}></i>
+                    {social.name}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+            <h3 class="text-2xl font-bold text-[#225522] mb-6">Send Us a Message</h3>
+            <form class="space-y-6">
+              <div>
+                <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ffd700] focus:border-transparent transition-all"
+                  placeholder="Enter your name"
+                />
+              </div>
+              
+              <div>
+                <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ffd700] focus:border-transparent transition-all"
+                  placeholder="your.email@example.com"
+                />
+              </div>
+              
+              <div>
+                <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                <input 
+                  type="text" 
+                  id="subject" 
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ffd700] focus:border-transparent transition-all"
+                  placeholder="What's this regarding?"
+                />
+              </div>
+              
+              <div>
+                <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+                <textarea 
+                  id="message" 
+                  rows="5"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ffd700] focus:border-transparent transition-all"
+                  placeholder="Tell us more about your pie adventure..."
+                ></textarea>
+              </div>
+              
+              <button 
+                type="submit"
+                class="w-full py-4 bg-[#225522] hover:bg-[#1a3d1a] text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-[1.02] shadow-lg"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-r from-[#1a3d1a] to-[#225522]">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Join Our Pie-Making Community</h2>
+      <p class="text-xl text-[#ffd700] max-w-2xl mx-auto mb-10">
+        Become part of our family of passionate pie artisans and get exclusive access to recipes, techniques, and special events.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <button class="px-8 py-4 bg-[#ffd700] text-[#225522] font-bold rounded-lg hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105">
+          Subscribe to Our Newsletter
+        </button>
+        <button class="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-[#225522] transition-all duration-300">
+          View Our Courses
+        </button>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+  
+  .social-icon {
+    transition: all 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+  
+  .contact-card {
+    transition: all 0.3s ease;
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(34, 85, 34, 0.2);
+  }
+  
+  .contact-form input, 
+  .contact-form textarea {
+    transition: all 0.3s ease;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.3);
+  }
+</style>

@@ -1,0 +1,159 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "PieCraft Pro - Master the Art of Authentic Porky Pies";
+const pageDescription = "Elevate your baking skills with expert guides and bold recipes for crafting irresistible, authentic pork pies. From traditional techniques to innovative twists, PieCraft Pro is your ultimate culinary companion.";
+
+const features = [
+  {
+    title: "Authentic Recipes",
+    description: "Time-tested formulas passed down through generations, adapted for modern kitchens.",
+    icon: "fas fa-book"
+  },
+  {
+    title: "Step-by-Step Guides",
+    description: "Crystal-clear instructions with photos and videos to ensure success every time.",
+    icon: "fas fa-clipboard-list"
+  },
+  {
+    title: "Pro Tips & Techniques",
+    description: "Learn insider secrets for flaky crusts, juicy fillings, and flawless presentation.",
+    icon: "fas fa-lightbulb"
+  },
+  {
+    title: "Community & Inspiration",
+    description: "Join our vibrant forum to share your creations and get feedback from experts.",
+    icon: "fas fa-users"
+  }
+];
+
+const testimonials = [
+  {
+    name: "Sarah Johnson",
+    role: "Professional Baker",
+    content: "The precision techniques taught here transformed my pork pie game completely!"
+  },
+  {
+    name: "Michael Chen",
+    role: "Home Cook",
+    content: "Finally, a resource that makes traditional baking accessible and exciting."
+  },
+  {
+    name: "Emma Rodriguez",
+    role: "Pastry Chef",
+    content: "As someone who's been baking for 15 years, I've never seen such clear methodology."
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-r from-[#225522] to-[#1a401a] text-white py-24 md:py-32 overflow-hidden">
+    <div class="absolute inset-0 bg-black bg-opacity-20 z-10"></div>
+    <div class="container mx-auto px-4 relative z-20">
+      <div class="max-w-3xl">
+        <span class="inline-block bg-[#ffd700] text-[#225522] px-4 py-1 rounded-full text-sm font-bold mb-4">BOLD CULINARY INSTRUCTION</span>
+        <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+          Master the Art of <span class="text-[#ffd700]">Authentic Porky Pies</span>
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 text-gray-100 leading-relaxed">
+          Elevate your baking skills with expert guides and bold recipes for crafting irresistible, authentic pork pies.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <button class="bg-[#ffd700] hover:bg-[#ffc400] text-[#225522] font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105 shadow-lg">
+            Start Your Journey
+          </button>
+          <button class="bg-transparent border-2 border-white hover:bg-white hover:text-[#225522] text-white font-bold py-3 px-8 rounded-lg transition duration-300">
+            Explore Recipes
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent z-10"></div>
+  </section>
+
+  <!-- Welcome Section -->
+  <section class="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#225522] mb-6">Welcome to PieCraft Pro</h2>
+        <div class="w-24 h-1 bg-[#ffd700] mx-auto mb-8"></div>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          Discover the bold world of pork pie craftsmanship! At PieCraft Pro, we empower home bakers and pros alike to create mouthwatering, traditional British pork pies with confidence and flair. Our instructional content demystifies every step, from perfect pastry to flavorful fillings.
+        </p>
+      </div>
+
+      <!-- Features Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {features.map((feature, index) => (
+          <div key={index} class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 transform hover:-translate-y-2">
+            <div class="text-[#ffd700] text-4xl mb-4">
+              <i class="{feature.icon}"></i>
+            </div>
+            <h3 class="text-xl font-bold text-[#225522] mb-3">{feature.title}</h3>
+            <p class="text-gray-600">{feature.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-16 md:py-24 bg-[#225522] text-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">What Our Community Says</h2>
+        <div class="w-24 h-1 bg-[#ffd700] mx-auto"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {testimonials.map((testimonial, index) => (
+          <div key={index} class="bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-xl border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
+            <div class="text-[#ffd700] text-5xl mb-4">"</div>
+            <p class="mb-6 italic text-lg">"{testimonial.content}"</p>
+            <div>
+              <p class="font-bold text-lg">{testimonial.name}</p>
+              <p class="text-[#ffd700]">{testimonial.role}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-r from-[#1a401a] to-[#225522] text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Master the Craft?</h2>
+      <p class="text-xl max-w-2xl mx-auto mb-10 text-gray-100">
+        Join thousands of passionate bakers transforming their skills and creating memorable culinary experiences.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <button class="bg-[#ffd700] hover:bg-[#ffc400] text-[#225522] font-bold py-4 px-10 rounded-lg text-lg transition duration-300 transform hover:scale-105 shadow-lg">
+          Get Started Today
+        </button>
+        <button class="bg-transparent border-2 border-white hover:bg-white hover:text-[#225522] text-white font-bold py-4 px-10 rounded-lg text-lg transition duration-300">
+          View Community
+        </button>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+  }
+
+  .floating {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .gradient-text {
+    background: linear-gradient(to right, #225522, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>

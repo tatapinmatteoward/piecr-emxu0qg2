@@ -1,0 +1,222 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "About PieCraft Pro";
+const pageDescription = "Discover the story behind PieCraft Pro, your ultimate guide to mastering authentic porky pies with bold, instructional expertise.";
+const teamMembers = [
+  { name: "Margaret Thornfield", role: "Founder & Lead Baker", bio: "15+ years crafting traditional British pies" },
+  { name: "Thomas Wexford", role: "Technical Director", bio: "Former master baker from Yorkshire" },
+  { name: "Eleanor Basset", role: "Recipe Scientist", bio: "Innovator in meat and pastry combinations" }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <!-- Hero Section -->
+  <div class="relative bg-gradient-to-r from-green-900 to-green-700 py-24 overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjEiIGZpbGw9IiNmZmQ3MDAiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjcGF0dGVybikiLz48L3N2Zz4=')]"></div>
+    </div>
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">About PieCraft Pro</h1>
+        <p class="text-xl md:text-2xl text-green-100 italic max-w-3xl mx-auto">Master the Art of Authentic Porky Pies</p>
+        <div class="mt-8 flex justify-center">
+          <div class="w-24 h-1 bg-yellow-400 rounded-full"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Story Section -->
+  <section class="py-16 bg-gradient-to-b from-white to-green-50">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <div class="lg:w-1/2">
+          <div class="relative">
+            <div class="bg-green-800 rounded-xl w-full h-96 shadow-2xl transform rotate-3"></div>
+            <div class="absolute inset-0 bg-gradient-to-br from-green-700 to-green-900 rounded-xl flex items-center justify-center">
+              <div class="text-center p-6">
+                <i class="fas fa-bread-slice text-yellow-400 text-6xl mb-4"></i>
+                <h3 class="text-2xl font-bold text-white">The Original Recipe</h3>
+                <p class="text-green-100 mt-2">Authentic Yorkshire tradition since 2008</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-1/2">
+          <h2 class="text-4xl font-bold text-green-900 mb-6">Our Story</h2>
+          <div class="space-y-4 text-gray-700">
+            <p class="text-lg leading-relaxed">
+              It all began in a cozy kitchen in the heart of Yorkshire, where the aroma of spiced pork and crispy pastry filled the air. 
+              Frustrated by subpar recipes online, our founder set out to demystify the craft of porky pies.
+            </p>
+            <p class="text-lg leading-relaxed">
+              Today, PieCraft Pro stands as a beacon for bold, instructional content that cuts through the fluff and delivers 
+              exactly what you need to create mouthwatering, authentic porky pies that rival the best pie shops in the UK.
+            </p>
+            <p class="text-lg leading-relaxed">
+              Every recipe is tested in real kitchens, every technique refined over countless hours of practice. 
+              We're here to elevate your baking from good to extraordinary.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="py-16 bg-gradient-to-r from-green-800 to-green-900">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-white mb-6">Our Mission</h2>
+        <div class="flex justify-center mb-8">
+          <div class="w-16 h-1 bg-yellow-400 rounded-full"></div>
+        </div>
+        <p class="text-xl text-green-100 leading-relaxed max-w-3xl mx-auto">
+          To empower every cook with the knowledge, techniques, and confidence to create authentic, restaurant-quality 
+          porky pies that celebrate Britain's finest baking traditions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-green-900 mb-4">Meet Our Experts</h2>
+        <p class="text-xl text-green-700 max-w-2xl mx-auto">The passionate minds behind PieCraft Pro</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {teamMembers.map((member, index) => (
+          <div key={index} class="bg-gradient-to-br from-green-50 to-white rounded-2xl overflow-hidden shadow-xl transform transition-all duration-300 hover:-translate-y-2">
+            <div class="h-48 bg-gradient-to-r from-green-700 to-green-900 flex items-center justify-center">
+              <div class="bg-gray-200 border-2 border-dashed rounded-xl w-32 h-32" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-green-900">{member.name}</h3>
+              <p class="text-yellow-500 font-semibold mb-3">{member.role}</p>
+              <p class="text-gray-600">{member.bio}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="py-16 bg-gradient-to-br from-green-50 to-green-100">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl font-bold text-green-900 text-center mb-12">Our Core Values</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white p-8 rounded-2xl shadow-lg">
+            <div class="flex items-start">
+              <div class="mr-4 mt-1">
+                <div class="w-12 h-12 rounded-full bg-yellow-400 flex items-center justify-center">
+                  <i class="fas fa-leaf text-green-900 text-xl"></i>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-green-900 mb-2">Authentic Heritage</h3>
+                <p class="text-gray-700">We honor the rich traditions of British baking while respecting time-honored techniques passed down through generations.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-white p-8 rounded-2xl shadow-lg">
+            <div class="flex items-start">
+              <div class="mr-4 mt-1">
+                <div class="w-12 h-12 rounded-full bg-yellow-400 flex items-center justify-center">
+                  <i class="fas fa-lightbulb text-green-900 text-xl"></i>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-green-900 mb-2">Educational Excellence</h3>
+                <p class="text-gray-700">Every tutorial is crafted with precision and clarity to ensure understanding and success for cooks of all levels.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-white p-8 rounded-2xl shadow-lg">
+            <div class="flex items-start">
+              <div class="mr-4 mt-1">
+                <div class="w-12 h-12 rounded-full bg-yellow-400 flex items-center justify-center">
+                  <i class="fas fa-heart text-green-900 text-xl"></i>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-green-900 mb-2">Passion for Quality</h3>
+                <p class="text-gray-700">We demand excellence in everything we create, ensuring each recipe delivers consistent, outstanding results.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-white p-8 rounded-2xl shadow-lg">
+            <div class="flex items-start">
+              <div class="mr-4 mt-1">
+                <div class="w-12 h-12 rounded-full bg-yellow-400 flex items-center justify-center">
+                  <i class="fas fa-users text-green-900 text-xl"></i>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-green-900 mb-2">Community Focus</h3>
+                <p class="text-gray-700">We foster a supportive community where bakers share experiences, learn together, and celebrate their successes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-gradient-to-r from-green-900 to-green-800">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-white mb-6">Ready to Master Porky Pies?</h2>
+        <p class="text-xl text-green-100 mb-10 max-w-2xl mx-auto">
+          Join thousands of bakers who have elevated their skills with our expert guides
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <button class="px-8 py-4 bg-yellow-400 text-green-900 font-bold rounded-full text-lg hover:bg-yellow-300 transition-colors duration-300 shadow-lg transform hover:scale-105">
+            Start Your Journey
+          </button>
+          <button class="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-full text-lg hover:bg-white hover:text-green-900 transition-colors duration-300">
+            Explore Recipes
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+  
+  .hover\:transform:hover {
+    transform: translateY(-0.5rem);
+  }
+  
+  .shadow-xl {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  .transform {
+    transition: transform 0.3s ease;
+  }
+  
+  .hover\:-translate-y-2:hover {
+    transform: translateY(-0.5rem);
+  }
+  
+  .hover\:scale-105:hover {
+    transform: scale(1.05);
+  }
+  
+  .bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjEiIGZpbGw9IiNmZmQ3MDAiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjcGF0dGVybikiLz48L3N2Zz4=')] {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjEiIGZpbGw9IiNmZmQ3MDAiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjcGF0dGVybikiLz48L3N2Zz4=');
+  }
+</style>

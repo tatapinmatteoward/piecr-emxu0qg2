@@ -1,0 +1,190 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Essential Tools for PieCraft Mastery";
+const pageDescription = "Equip yourself with the right tools to craft professional-grade porky pies. From basic essentials to advanced gear, discover everything you need to master the art.";
+const tools = [
+  {
+    name: "Rolling Pin",
+    description: "A sturdy wooden or marble rolling pin for achieving even dough thickness. Pro Tip: Chill it for ultra-smooth rolling without sticking.",
+    icon: "fa-utensil-spoon"
+  },
+  {
+    name: "Pie Tins or Molds",
+    description: "Non-stick metal tins in various sizes (8-10 inches) for perfect shaping. Opt for springform varieties for easy removal.",
+    icon: "fa-bread-slice"
+  },
+  {
+    name: "Parchment Paper",
+    description: "Premium parchment paper for lining pies and preventing sticking. Essential for clean, professional results.",
+    icon: "fa-file-alt"
+  },
+  {
+    name: "Sharp Knife",
+    description: "A precision knife for slicing and cutting. Choose one with a sharp blade for clean cuts without tearing dough.",
+    icon: "fa-cut"
+  },
+  {
+    name: "Measuring Cups",
+    description: "Accurate measuring cups for precise ingredient portions. Stainless steel for durability and clarity.",
+    icon: "fa-tachometer-alt"
+  },
+  {
+    name: "Mixing Bowls",
+    description: "Set of stainless steel mixing bowls in various sizes. Perfect for preparing dough and mixing ingredients.",
+    icon: "fa-bowl-food"
+  }
+];
+
+const advancedTools = [
+  {
+    name: "Pie Crust Cutter",
+    description: "Professional-grade cutter for creating uniform crust shapes. Ensures consistent results every time.",
+    icon: "fa-circle"
+  },
+  {
+    name: "Dough Sheeter",
+    description: "Advanced tool for creating uniformly thin dough sheets. Perfect for complex pie designs.",
+    icon: "fa-drum"
+  },
+  {
+    name: "Temperature Monitor",
+    description: "Precision thermometer for monitoring oil and oven temperatures. Essential for perfect cooking results.",
+    icon: "fa-thermometer-half"
+  },
+  {
+    name: "Pie Decoration Kit",
+    description: "Complete set of tools for artistic pie decoration including brushes, stamps, and piping tips.",
+    icon: "fa-paint-brush"
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <!-- Hero Section -->
+  <div class="relative bg-gradient-to-r from-[#225522] to-[#1a401a] py-24 overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjEiIGZpbGw9IiNmZmQ3MDAiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjcGF0dGVybikiLz48L3N2Zz4=')]"></div>
+    </div>
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">Essential Tools for <span class="text-[#ffd700]">PieCraft</span> Mastery</h1>
+        <p class="text-xl text-green-100 mb-8 max-w-2xl mx-auto">Equip yourself with the right tools to craft professional-grade porky pies. From basic essentials to advanced gear, discover everything you need to master the art.</p>
+        <div class="flex justify-center">
+          <div class="bg-[#ffd700] text-[#225522] px-6 py-3 rounded-full font-bold text-lg shadow-lg transform transition duration-300 hover:scale-105">
+            <i class="fas fa-chef-hat mr-2"></i> Master the Art of Authentic Porky Pies
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Introduction Section -->
+  <section class="py-16 bg-gradient-to-b from-white to-green-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#225522] mb-6">At <span class="text-[#ffd700]">PieCraft Pro</span>, we believe that the right tools are the foundation of pie perfection.</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          Whether you're a novice pie maker or a seasoned chef, having the proper equipment ensures your porky pies turn out flaky, flavorful, and authentic every time. 
+          Dive into our curated selection of must-have tools designed specifically for bold, culinary instruction in the world of <em class="font-semibold text-[#225522]">porky pies</em>.
+        </p>
+      </div>
+
+      <!-- Basic Essentials Grid -->
+      <div class="mb-20">
+        <div class="flex items-center justify-center mb-10">
+          <h2 class="text-3xl font-bold text-[#225522] border-b-4 border-[#ffd700] pb-2 inline-block">Basic Essentials</h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {tools.map((tool, index) => (
+            <div 
+              key={index} 
+              class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border border-green-100"
+            >
+              <div class="p-6">
+                <div class="flex items-center mb-4">
+                  <div class="bg-[#ffd700] p-3 rounded-full mr-4">
+                    <i class={"fas " + tool.icon + " text-2xl text-[#225522]"}></i>
+                  </div>
+                  <h3 class="text-xl font-bold text-[#225522]">{tool.name}</h3>
+                </div>
+                <p class="text-gray-600">{tool.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Advanced Tools -->
+      <div class="bg-[#225522] rounded-2xl p-8 md:p-12 shadow-2xl">
+        <div class="flex items-center justify-center mb-10">
+          <h2 class="text-3xl font-bold text-white border-b-4 border-[#ffd700] pb-2 inline-block">Advanced & Professional Grade</h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {advancedTools.map((tool, index) => (
+            <div 
+              key={index} 
+              class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20"
+            >
+              <div class="flex items-start">
+                <div class="bg-[#ffd700] p-3 rounded-full mr-4 mt-1">
+                  <i class={"fas " + tool.icon + " text-xl text-[#225522]"}></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-white mb-2">{tool.name}</h3>
+                  <p class="text-green-100">{tool.description}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="mt-20 text-center">
+        <div class="bg-gradient-to-r from-[#ffd700] to-yellow-500 rounded-2xl p-8 md:p-12 shadow-xl">
+          <h2 class="text-3xl md:text-4xl font-bold text-[#225522] mb-4">Ready to Elevate Your PieCraft?</h2>
+          <p class="text-xl text-[#225522] mb-8 max-w-2xl mx-auto">Join thousands of passionate pie makers who have transformed their culinary journey with our professional tools.</p>
+          <button class="bg-[#225522] text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg transform transition duration-300 hover:bg-[#1a401a] hover:scale-105">
+            <i class="fas fa-shopping-cart mr-2"></i> Shop Our Tool Collection
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+  
+  .hero-pattern {
+    background-image: repeating-linear-gradient(
+      45deg,
+      rgba(255, 215, 0, 0.1),
+      rgba(255, 215, 0, 0.1) 10px,
+      transparent 10px,
+      transparent 20px
+    );
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .pulse {
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 215, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0); }
+  }
+</style>

@@ -1,0 +1,249 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Tutorials: Master the Art of Authentic Porky Pies";
+const pageDescription = "Explore step-by-step tutorials designed to elevate your pie-making prowess. From beginner basics to advanced techniques, learn to craft mouthwatering porky pies with PieCraft Pro.";
+
+const beginnerEssentials = [
+  {
+    title: "Perfect Pastry Dough",
+    description: "Learn the foundational recipe for flaky, golden crusts using simple ingredients.",
+    tip: "Pro tip: Chill your dough for 30 minutes to prevent shrinkage."
+  },
+  {
+    title: "Basic Pork Filling",
+    description: "Discover how to season ground pork with sage, onion, and spices for that classic British flavor."
+  }
+];
+
+const intermediateTechniques = [
+  {
+    title: "Jellied Pork Pie Mastery",
+    description: "Step-by-step instructions on creating the signature jelly seal that keeps your pie moist and authentic."
+  },
+  {
+    title: "Hand-Raising Pies",
+    description: "Boldly shape and seal your pies with traditional hand-raising techniques for a rustic charm."
+  }
+];
+
+const advancedMethods = [
+  {
+    title: "Artisanal Seasoning",
+    description: "Master the art of layering aromatic herbs and spices for complex, layered flavors."
+  },
+  {
+    title: "Temperature Control",
+    description: "Learn precise baking temperatures and timing to achieve perfect crust and filling consistency."
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <!-- Hero Section -->
+  <div class="relative bg-gradient-to-r from-[#225522] to-[#1a401a] py-24 overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjEuNSIgZmlsbD0iI2ZmZCIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==')]"></div>
+    </div>
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in-down">
+          Tutorials: Master the Art of Authentic Porky Pies
+        </h1>
+        <p class="text-xl md:text-2xl text-[#ffd700] mb-8 animate-fade-in-up">
+          Explore step-by-step tutorials designed to elevate your pie-making prowess
+        </p>
+        <div class="flex justify-center">
+          <div class="w-24 h-1 bg-[#ffd700] rounded-full"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Welcome Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#225522] mb-6">
+          Unlock the secrets of authentic porky pies
+        </h2>
+        <div class="flex justify-center mb-8">
+          <div class="w-16 h-1 bg-[#ffd700] rounded-full"></div>
+        </div>
+        <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+          Whether you're a novice pie enthusiast or a seasoned baker, these guides will transform your kitchen into a pie-crafting haven. Dive in and master the craft!
+        </p>
+        <div class="bg-[#f0f9f0] border-l-4 border-[#225522] p-6 rounded-r-lg max-w-2xl mx-auto">
+          <p class="text-[#225522] italic font-semibold">
+            "The key to a perfect porky pie lies not just in the ingredients, but in the technique passed down through generations."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beginner Essentials -->
+  <section class="py-16 bg-gradient-to-br from-[#e8f5e8] to-[#d1f0d1]">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#225522] mb-4">Beginner Essentials</h2>
+        <div class="w-24 h-1 bg-[#ffd700] mx-auto"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        {beginnerEssentials.map((item, index) => (
+          <div 
+            class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            style="--delay: ${index * 100}ms"
+          >
+            <div class="p-6">
+              <div class="flex items-start mb-4">
+                <div class="bg-[#225522] text-white rounded-lg p-3 mr-4">
+                  <i class="fas fa-bread-slice text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-[#225522]">{item.title}</h3>
+              </div>
+              <p class="text-gray-700 mb-4">{item.description}</p>
+              {item.tip && (
+                <div class="bg-yellow-50 border-l-4 border-[#ffd700] p-4 rounded-r-lg">
+                  <p class="text-[#225522] font-medium"><i class="fas fa-lightbulb text-[#ffd700] mr-2"></i>{item.tip}</p>
+                </div>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Intermediate Techniques -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#225522] mb-4">Intermediate Techniques</h2>
+        <div class="w-24 h-1 bg-[#ffd700] mx-auto"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        {intermediateTechniques.map((item, index) => (
+          <div 
+            class="bg-[#f0f9f0] rounded-xl shadow-lg overflow-hidden border border-[#225522] border-opacity-20 transform transition-all duration-300 hover:shadow-xl"
+            style="--delay: ${index * 100}ms"
+          >
+            <div class="p-6">
+              <div class="flex items-start mb-4">
+                <div class="bg-[#ffd700] text-[#225522] rounded-lg p-3 mr-4">
+                  <i class="fas fa-hand-paper text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-[#225522]">{item.title}</h3>
+              </div>
+              <p class="text-gray-700">{item.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Advanced Methods -->
+  <section class="py-16 bg-gradient-to-br from-[#e8f5e8] to-[#d1f0d1]">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#225522] mb-4">Advanced Methods</h2>
+        <div class="w-24 h-1 bg-[#ffd700] mx-auto"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        {advancedMethods.map((item, index) => (
+          <div 
+            class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            style="--delay: ${index * 100}ms"
+          >
+            <div class="p-6">
+              <div class="flex items-start mb-4">
+                <div class="bg-[#225522] text-white rounded-lg p-3 mr-4">
+                  <i class="fas fa-chart-line text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-[#225522]">{item.title}</h3>
+              </div>
+              <p class="text-gray-700">{item.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-16 bg-[#225522]">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Pie-Making Skills?</h2>
+        <p class="text-xl text-[#ffd700] mb-8">Join our community of passionate porky pie makers today</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <button class="bg-[#ffd700] text-[#225522] font-bold py-3 px-8 rounded-full text-lg hover:bg-[#ffc400] transition-colors duration-300 transform hover:scale-105">
+            Start Learning Now
+          </button>
+          <button class="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-white hover:text-[#225522] transition-colors duration-300">
+            View Full Course Catalog
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @keyframes fade-in-down {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in-down {
+    animation: fade-in-down 0.8s ease-out forwards;
+  }
+  
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+  }
+  
+  .bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjEuNSIgZmlsbD0iI2ZmZCIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==')] {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjEuNSIgZmlsbD0iI2ZmZCIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==");
+  }
+</style>
+
+<script>
+  // Add scroll animation to tutorial cards
+  document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.bg-white.rounded-xl.shadow-lg');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animation = 'fadeInUp 0.6s ease-out forwards';
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    cards.forEach(card => {
+      observer.observe(card);
+    });
+  });
+</script>
